@@ -36,7 +36,7 @@
       color: var(--text);
       line-height: 1.6;
       overflow-x: hidden;
-      background-image: url('https://images.unsplash.com/photo-1571330735066-03aaa9429d89?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80');
+      background-image: url('https://images.unsplash.com/photo-1571330735066-03aaa9429d89?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%极3D%3D&auto=format&fit=crop&w=2070&q=80');
       background-size: cover;
       background-attachment: fixed;
       background-blend-mode: overlay;
@@ -63,7 +63,7 @@
       top: 0;
       z-index: 1000;
       transition: all 0.3s ease;
-      background: rgba(18, 18, 18, 0.95);
+      background: rgba(18, 18, 18, 极.95);
       backdrop-filter: blur(10px);
       box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
     }
@@ -125,7 +125,7 @@
       transition: width 0.3s ease;
     }
 
-    .nav-links a:hover::after, .nav-links a.active::after {
+    .nav-links a:hover::after, .nav极inks a.active::after {
       width: 100%;
     }
 
@@ -144,7 +144,7 @@
       padding: 15px 0;
       text-align: center;
       font-weight: 600;
-      margin-top: 80px; /* Adjust based on header height */
+      margin-top: 80px;
     }
 
     .stats-container {
@@ -154,7 +154,7 @@
     }
 
     .stat-item {
-      padding: 0 15px;
+      padding: 0 15极x;
     }
 
     .stat-number {
@@ -172,10 +172,26 @@
       position: relative;
       text-align: center;
     }
+    
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-image: url('https://i.ibb.co/SwnC2CCc/First-Live-Show-In-My-Life-in-2017.jpg');
+      background-size: cover;
+      background-position: center;
+      opacity: 0.2;
+      z-index: -1;
+    }
 
     .hero-content {
       max-width: 700px;
       margin: 0 auto;
+      position: relative;
+      z-index: 1;
     }
 
     .profile-image {
@@ -186,6 +202,8 @@
       margin: 0 auto 30px;
       border: 5px solid var(--primary);
       box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+      position: relative;
+      z-index: 2;
     }
 
     .profile-image img {
@@ -359,6 +377,46 @@
       margin-right: 8px;
     }
 
+    /* Media Links Section */
+    .media-links {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 20px;
+      margin-top: 30px;
+    }
+
+    .media-link {
+      display: flex;
+      align-items: center;
+      background: var(--card-bg);
+      padding: 15px;
+      border-radius: 10px;
+      text-decoration: none;
+      color: var(--text);
+      transition: all 0.3s ease;
+    }
+
+    .media-link:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    }
+
+    .media-icon {
+      font-size: 2rem;
+      margin-right: 15px;
+      color: var(--primary);
+    }
+
+    .media-info h3 {
+      font-size: 1.1rem;
+      margin-bottom: 5px;
+    }
+
+    .media-info p {
+      font-size: 0.9rem;
+      color: var(--gray);
+    }
+
     /* Gallery Section */
     .tab-container {
       display: flex;
@@ -400,7 +458,7 @@
     .tab-content {
       display: none;
       padding-top: 20px;
-      animation: fadeIn 0.5s ease-in-out;
+      animation: fade极 0.5s ease-in-out;
     }
 
     .tab-content.active {
@@ -456,7 +514,7 @@
     /* Collaborators & Team Grids */
     .card-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1极));
       gap: 25px;
     }
 
@@ -563,14 +621,8 @@
       font-weight: 600;
     }
 
-    /* AI Features Section */
-    .ai-features-container {
-      display: flex;
-      flex-direction: column;
-      gap: 60px;
-    }
-
-    .ai-feature-box {
+    /* Fan Club Section */
+    .fan-club-container {
       text-align: center;
       padding: 40px;
       background-color: var(--card-bg);
@@ -578,31 +630,41 @@
       border: 1px solid rgba(29, 185, 84, 0.2);
     }
 
-    .ai-feature-box h2 {
+    .fan-club-container h2 {
       margin-bottom: 20px;
-      color: var(--accent3);
+      color: var(--primary);
     }
 
-    .ai-input {
-      width: 100%;
-      padding: 15px;
-      border-radius: 10px;
-      border: 2px solid var(--primary);
-      background-color: #2c2c2c;
-      color: var(--text);
+    .fan-club-container p {
+      margin-bottom: 25px;
       font-size: 1rem;
-      min-height: 120px;
-      margin-bottom: 20px;
+      color: var(--gray);
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
     }
 
-    .ai-output {
-      background-color: #1e1e1e;
-      padding: 30px;
-      border-radius: 15px;
-      min-height: 150px;
-      text-align: left;
-      white-space: pre-wrap;
-      font-style: italic;
+    .fan-club-stats {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      margin: 30px 0;
+    }
+
+    .fan-stat {
+      text-align: center;
+    }
+
+    .fan-stat-number {
+      font-size: 2.5rem;
+      font-weight: 700;
+      color: var(--primary);
+      display: block;
+    }
+
+    .fan-stat-label {
+      font-size: 0.9rem;
+      color: var(--gray);
     }
 
     /* Footer */
@@ -701,6 +763,11 @@
         padding: 10px 15px;
         font-size: 1rem;
       }
+      
+      .fan-club-stats {
+        flex-direction: column;
+        gap: 20px;
+      }
     }
   </style>
 </head>
@@ -712,9 +779,10 @@
         <button class="hamburger" id="hamburger"><i class="fas fa-bars"></i></button>
         <ul class="nav-links" id="navLinks">
           <li><a href="#top-songs">Music</a></li>
+          <li><a href="#media">Media</a></li>
           <li><a href="#gallery">Gallery</a></li>
           <li><a href="#contributors">Fans</a></li>
-          <li><a href="#ai-tools">AI Tools</a></li>
+          <li><a href="#fan-club">Fan Club</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
       </nav>
@@ -748,7 +816,7 @@
 
     <div class="stats-bar">
       <div class="stats-container">
-        <div class="stat-item"><span class="stat-number">160M+</span> YouTube Views</div>
+        <极 class="stat-item"><span class="stat-number">160M+</span> YouTube Views</div>
         <div class="stat-item"><span class="stat-number">50+</span> Original Songs</div>
         <div class="stat-item"><span class="stat-number">2nd</span> Most Viewed Bengali Songs</div>
       </div>
@@ -767,17 +835,65 @@
             <a href="https://youtu.be/FA1d11UOg8" target="_blank" class="song-play"><i class="fas fa-play-circle"></i> Play Now</a>
           </div>
           <div class="song-card">
-            <h3 class="song-title">Mon Bole Tui Shun</h3>
+            <h3 class="song-title">Mon Bole T极i Shun</h3>
             <p>A fan favorite with a soulful melody that has captured millions of hearts.</p>
             <span class="song-views">43M+ Views</span>
             <a href="https://youtu.be/NksrfLrV8DY" target="_blank" class="song-play"><i class="fas fa-play-circle"></i> Play Now</a>
           </div>
           <div class="song-card">
             <h3 class="song-title">Boleche Mon</h3>
-            <p>A heartfelt expression of emotions, beautifully composed and sung.</p>
+            <p>A heartfelt expression of emotions, beautifully composed and sung.</极>
             <span class="song-views">15M+ Views</span>
             <a href="https://open.spotify.com/track/your-track-id" target="_blank" class="song-play"><i class="fas fa-play-circle"></i> Play Now</a>
           </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="media">
+      <div class="container">
+        <div class="section-title">
+          <h2>Media Features</h2>
+          <p>News articles and television interviews</p>
+        </div>
+
+        <div class="media-links">
+          <a href="https://www.kalerkantho.com/print-edition/ronger-mela/2019/03/28/751965" target="_blank" class="media-link">
+            <div class="media-icon"><i class="fas fa-newspaper"></i></div>
+            <div class="media-info">
+              <h3>Kalerkantho News</h3>
+              <p>Feature article about Mahdi Sultan's music journey</p>
+            </div>
+          </a>
+
+          <a href="https://youtube.com/watch?v=GTkBoJyCfrI&feature=share" target="_blank" class="media-link">
+            <div class="media-icon"><i class="fab fa-youtube"></i></div>
+            <div class="media-info">
+              <h3>Channel I Television</h3>
+              <p>Exclusive interview with Mahdi Sultan</p>
+            </div>
+          </a>
+
+          <a href="https://youtube.com/watch?v=lojy极f6nLcyc&feature=share" target="_blank" class="media-link">
+            <div class="media-icon"><i class="fas fa-tv"></i></div>
+            <div class="media-info">
+              <h3>Somoy TV Interview</h3>
+              <p>In-depth conversation about music career</p>
+            </div>
+          </a>
+
+          <a href="https://youtube.com/watch?v=SZbKNK9JOkQ&feature=share" target="_blank" class="media-link">
+            <div class="media-icon"><i class="fas fa-microphone-alt"></i></div>
+            <div class="media-info">
+              <h3>Banglavision TV</h3>
+              <p>Special feature and performance</p>
+            </div>
+          </a>
+        </div>
+
+        <div class="gallery-item" style="margin-top: 30px;">
+          <img src="https://i.ibb.co/7JF6wwjx/131995744-894939164580017-5956376747180307-n.jpg" alt="Top 10 Songs 2020">
+          <div class="item-overlay"><h3>Top 10 Songs of 2020</h3></div>
         </div>
       </div>
     </section>
@@ -797,87 +913,31 @@
         <div class="tab-content active" id="album-covers">
           <div class="gallery-grid">
             <div class="gallery-item">
-              <img src="https://i.ibb.co/rGCqwFr/150112329-264097348438440-4545835285453247504-n.jpg" alt="Album Cover">
-              <div class="item-overlay"><h3>Album Cover</h3></div>
+              <img src="https://i.ibb.co/rGCqwFr/150112329-264097348438440-4545835285453247504-n.jpg" alt="Tor Mon Paray - AVON CHAKLAUBER">
+              <div class="item-overlay"><h3>Tor Mon Paray - AVON CHAKLAUBER</h3></div>
             </div>
             <div class="gallery-item">
-              <img src="https://i.ibb.co/PvXsTfsV/images-4.jpg" alt="Album Cover">
-              <div class="item-overlay"><h3>Album Cover</h3></div>
+              <img src="https://i.ibb.co/PvXsTfsV/images-4.jpg" alt="Mon Bole Tui Shun - BESTMEDIA">
+              <div class="item-overlay"><h3>Mon Bole Tui Shun - BESTMEDIA</h3></div>
             </div>
             <div class="gallery-item">
-              <img src="https://i.ibb.co/gl82SCs3/images-3.jpg" alt="Album Cover">
-              <div class="item-overlay"><h3>Album Cover</h3></div>
+              <img src="https://i.ibb.co/gl82SCs3/images-3.jpg" alt="Boleche Mon - SUN PRODUCTION">
+              <div class="item-overlay"><h3>Boleche Mon - SUN PRODUCTION</h3></div>
             </div>
             <div class="gallery-item">
-              <img src="https://i.ibb.co/Rpb6R5X2/images-2.jpg" alt="Album Cover">
-              <div class="item-overlay"><h3>Album Cover</h3></div>
+              <img src="https://i.ibb.co/Rpb6R5X2/images-2.jpg" alt="Jugol Poth Chola - PROTUNE">
+              <div class="item-overlay"><h3>Jugol Poth Chola - PROTUNE</h3></div>
             </div>
             <div class="gallery-item">
-              <img src="https://i.ibb.co/hFD7qXtC/images-1.jpg" alt="Album Cover">
-              <div class="item-overlay"><h3>Album Cover</h3></div>
+              <img src="https://i.ibb.co/hFD7qXtC/images-1.jpg" alt="Lal Shobujer Feriwala - CINEMAZZED">
+              <div class="item-overlay"><h3>Lal Shobujer Feriwala - CINEMAZZED</h3></div>
             </div>
             <div class="gallery-item">
-              <img src="https://i.ibb.co/N6JbtW28/129716880-883131005760833-1844827561678738734-n.jpg" alt="Album Cover">
-              <div class="item-overlay"><h3>Album Cover</h3></div>
+              <img src="https://i.ibb.co/N6JbtW28/129716880-883131005760833-1844827561678738734-n.jpg" alt="Single Cover - DBOX">
+              <div class="item-overlay"><h3>Single Cover - DBOX</h3></div>
             </div>
-            <div class="gallery-item">
-              <img src="https://i.ibb.co/r2Bkz406/66699777-506468886760382-7839999363286827008-n.jpg" alt="Album Cover">
-              <div class="item-overlay"><h3>Album Cover</h3></div>
-            </div>
-            <div class="gallery-item">
-              <img src="https://i.ibb.co/DPQXgQGN/86427300-664906510916618-7563236231987855360-n.jpg" alt="Album Cover">
-              <div class="item-overlay"><h3>Album Cover</h3></div>
-            </div>
-            <div class="gallery-item">
-              <img src="https://i.ibb.co/mCV7WbmX/119165550-193504622164380-3585775762534191690-n.jpg" alt="Album Cover">
-              <div class="item-overlay"><h3>Album Cover</h3></div>
-            </div>
-            <div class="gallery-item">
-              <img src="https://i.ibb.co/YBtcXGww/84336377-661746114565991-7756641697408221184-n.jpg" alt="Album Cover">
-              <div class="item-overlay"><h3>Album Cover</h3></div>
-            </div>
-            <div class="gallery-item">
-              <img src="https://i.ibb.co/XTpv2Hf/56229213-443731849700753-3010575721476128768-n.jpg" alt="Album Cover">
-              <div class="item-overlay"><h3>Album Cover</h3></div>
-            </div>
-            <div class="gallery-item">
-              <img src="https://i.ibb.co/TqM87yyJ/FB-IMG-1744686969337.jpg" alt="Album Cover">
-              <div class="item-overlay"><h3>Album Cover</h3></div>
-            </div>
-            <div class="gallery-item">
-              <img src="https://i.ibb.co/WptZBsFn/MAHDI-Sultan-9.jpg" alt="Album Cover">
-              <div class="item-overlay"><h3>Album Cover</h3></div>
-            </div>
-            <div class="gallery-item">
-              <img src="https://i.ibb.co/1G2723JV/IMG-6421.jpg" alt="Album Cover">
-              <div class="item-overlay"><h3>Album Cover</h3></div>
-            </div>
-            <div class="gallery-item">
-              <img src="https://i.ibb.co/8n2dkrGD/IMG-4114.jpg" alt="Album Cover">
-              <div class="item-overlay"><h3>Album Cover</h3></div>
-            </div>
-            <div class="gallery-item">
-              <img src="https://i.ibb.co/pvpbKPRH/FB-IMG-1640871043677.jpg" alt="Album Cover">
-              <div class="item-overlay"><h3>Album Cover</h3></div>
-            </div>
-            <div class="gallery-item">
-              <img src="https://i.ibb.co/yF4XX9KQ/FB-IMG-1644746261493.jpg" alt="Album Cover">
-              <div class="item-overlay"><h3>Album Cover</h3></div>
-            </div>
-            <div class="gallery-item">
-              <img src="https://i.ibb.co/SwxQkHfh/FB-IMG-1644746238997.jpg" alt="Album Cover">
-              <div class="item-overlay"><h3>Album Cover</h3></div>
-            </div>
-            <div class="gallery-item">
-              <img src="https://i.ibb.co/Q7N7Dp3b/FB-IMG-1644746248025.jpg" alt="Album Cover">
-              <div class="item-overlay"><h3>Album Cover</h3></div>
-            </div>
-            <div class="gallery-item">
-              <img src="https://i.ibb.co/NgjyhxXp/received-321349156770230.jpg" alt="Album Cover">
-              <div class="item-overlay"><h3>Album Cover</h3></div>
-            </div>
-          </div> 
-        </div> 
+          </div>
+        </div>
         
         <div class="tab-content" id="collaborations"> 
           <div class="card-grid"> 
@@ -900,7 +960,7 @@
               <p class="card-desc">We sung as co-singer on "Lal Shobujer Feriwala"</p> 
             </div> 
             <div class="artist-card"> 
-              <div class="avatar"><img src="https://i.ibb.co/XZZtMvMB/IMG-20211120-WA0030.jpg" alt="Belal Khan"></div> 
+              <极 class="avatar"><img src="https://i.ibb.co/XZZt极MvMB/IMG-20211120-WA0030.jpg" alt="Belal Khan"></div> 
               <h3 class="card-name">Belal Khan</h3> 
               <p class="card-role">Composer & Co-Singer</p> 
               <p class="card-desc">With Belal Khan he composed for me "Jugol Poth Chola" - One of Melodious Song of my career</p> 
@@ -913,7 +973,7 @@
             <div class="team-member"> 
               <div class="avatar"><img src="https://i.ibb.co/W6Dq7Zd/491806816-3073103566172103-5633577394266089225-n.jpg" alt="Mostakim Billah"></div> 
               <h3 class="card-name">Mostakim Billah</h3> 
-              <p class="card-role">Music Producer & Band Manager</p> 
+              <p class="card-role">Music Producer & Band Manager</极> 
               <p class="card-desc">Works on sound design and production quality And Handle All Shows.</p> 
             </div> 
             <div class="team-member"> 
@@ -949,29 +1009,17 @@
               <div class="item-overlay"><h3>Mahdi Sultan</h3></div>
             </div>
             <div class="gallery-item">
-              <img src="https://i.ibb.co/SwnC2CCc/First-Live-Show-In-My-Life-in-2017.jpg" alt="First Live Show">
+              <img src="https://i.ibb.co/Swn极C2CCc/First-Live-Show-In-My-Life-in-2017.jpg" alt="First Live Show">
               <div class="item-overlay"><h3>First Live Show (2017)</h3></div>
             </div>
 
             <!-- Tor Mon Paray Set -->
             <div class="gallery-item">
-              <img src="https://i.ibb.co/YFwsxv6P/120133378-196785435169632-5747795116972759464-n-1.jpg" alt="Tor Mon Paray Set">
+              <img src="https://i.ibb.co/YFwsxv6极/120133378-196785435169632-5747795116972759464-n-1.jpg" alt="Tor Mon Paray Set">
               <div class="item-overlay"><h3>Tor Mon Paray Set</h3></div>
             </div>
             <div class="gallery-item">
               <img src="https://i.ibb.co/x8DTKNhQ/81688007-116842466497263-6567011193221808128-n.jpg" alt="Tor Mon Paray Set">
-              <div class="item-overlay"><h3>Tor Mon Paray Set</h3></div>
-            </div>
-            <div class="gallery-item">
-              <img src="https://i.ibb.co/23cx6MrW/120276493-196785461836296-767580368781847575-n.jpg" alt="Tor Mon Paray Set">
-              <div class="item-overlay"><h3>Tor Mon Paray Set</h3></div>
-            </div>
-            <div class="gallery-item">
-              <img src="https://i.ibb.co/X6mKcBc/120236840-196785375169638-3772738291099885056-n.jpg" alt="Tor Mon Paray Set">
-              <div class="item-overlay"><h3>Tor Mon Paray Set</h3></div>
-            </div>
-            <div class="gallery-item">
-              <img src="https://i.ibb.co/1GnvP90x/120261531-196785341836308-1949852048170155348-n.jpg" alt="Tor Mon Paray Set">
               <div class="item-overlay"><h3>Tor Mon Paray Set</h3></div>
             </div>
 
@@ -981,115 +1029,7 @@
               <div class="item-overlay"><h3>With Media Friends</h3></div>
             </div>
             <div class="gallery-item">
-              <img src="https://i.ibb.co/HpRbTq92/83095305-125164735665036-6344918726403424256-n.jpg" alt="With Media Friends">
-              <div class="item-overlay"><h3>With Media Friends</h3></div>
-            </div>
-            <div class="gallery-item">
-              <img src="https://i.ibb.co/zHr07SKQ/128743561-219471662901009-5840425696240547179-n.jpg" alt="With Media Friends">
-              <div class="item-overlay"><h3>With Media Friends</h3></div>
-            </div>
-            <div class="gallery-item">
-              <img src="https://i.ibb.co/Fq0hNYrV/470190268-1112374136944086-6563130957021079205-n.jpg" alt="With Media Friends">
-              <div class="item-overlay"><h3>With Media Friends</h3></div>
-            </div>
-            <div class="gallery-item">
-              <img src="https://i.ibb.co/gLRX0NLw/161360210-280453363469505-987312058916581177-n.jpg" alt="With Media Friends">
-              <div class="item-overlay"><h3>With Media Friends</h3></div>
-            </div>
-            <div class="gallery-item">
-              <img src="https://i.ibb.co/276S3tvb/161419791-280453336802841-2762228969446467403-n.jpg" alt="With Media Friends">
-              <div class="item-overlay"><h3>With Media Friends</h3></div>
-            </div>
-            <div class="gallery-item">
-              <img src="https://i.ibb.co/PG0hph8P/165951097-288882635959911-612782152712866965-n.jpg" alt="With Media Friends">
-              <div class="item-overlay"><h3>With Media Friends</h3></div>
-            </div>
-            <div class="gallery-item">
-              <img src="https://i.ibb.co/cXTRzgNQ/122084169-202730127908496-1607860798623779-n.jpg" alt="With Media Friends">
-              <div class="item-overlay"><h3>With Media Friends</h3></div>
-            </div>
-            <div class="gallery-item">
-              <img src="https://i.ibb.co/3yxh95Y7/80762038-111581877023322-4459413656664276992-n.jpg" alt="With Media Friends">
-              <div class="item-overlay"><h3>With Media Friends</h3></div>
-            </div>
-            <div class="gallery-item">
-              <img src="https://i.ibb.co/qYqdsWjP/83286140-124417139073129-628406105415876608-n.jpg" alt="With Media Friends">
-              <div class="item-overlay"><h3>With Media Friends</h3></div>
-            </div>
-            <div class="gallery-item">
-              <img src="https://i.ibb.co/bRJ7h4H3/83943687-125164542331722-8095316077904396288-n.jpg" alt="With Media Friends">
-              <div class="item-overlay"><h3>With Media Friends</h3></div>
-            </div>
-            <div class="gallery-item">
-              <img src="https://i.ibb.co/1GgGhDj8/84079856-126591332189043-8387336023960453120-n.jpg" alt="With Media Friends">
-              <div class="item-overlay"><h3>With Media Friends</h3></div>
-            </div>
-            <div class="gallery-item">
-              <img src="https://i.ibb.co/gF4p9tKz/144774371-255046526010189-4286547403052181187-n.jpg" alt="With Media Friends">
-              <div class="item-overlay"><h3>With Media Friends</h3></div>
-            </div>
-            <div class="gallery-item">
-              <img src="https://i.ibb.co/SwRwLBCq/469111512-1108577223990444-1443420475711228583-n.jpg" alt="With Media Friends">
-              <div class="item-overlay"><h3>With Media Friends</h3></div>
-            </div>
-            <div class="gallery-item">
-              <img src="https://i.ibb.co/Y4sCSmxs/473769436-1136173577897475-7420036504996583911-n.jpg" alt="With Media Friends">
-              <div class="item-overlay"><h3>With Media Friends</h3></div>
-            </div>
-            <div class="gallery-item">
-              <img src="https://i.ibb.co/fVtkbyXx/FB-IMG-1739286684298.jpg" alt="With Media Friends">
-              <div class="item-overlay"><h3>With Media Friends</h3></div>
-            </div>
-            <div class="gallery-item">
-              <img src="https://i.ibb.co/cjfdy4m/FB-IMG-1739286668520.jpg" alt="With Media Friends">
-              <div class="item-overlay"><h3>With Media Friends</h3></div>
-            </div>
-            <div class="gallery-item">
-              <img src="https://i.ibb.co/zTcbYS09/FB-IMG-1739284125477.jpg" alt="With Media Friends">
-              <div class="item-overlay"><h3>With Media Friends</h3></div>
-            </div>
-            <div class="gallery-item">
-              <img src="https://i.ibb.co/WX63cwv/FB-IMG-1739284065023.jpg" alt="With Media Friends">
-              <div class="item-overlay"><h3>With Media Friends</h3></div>
-            </div>
-            <div class="gallery-item">
-              <img src="https://i.ibb.co/hxCcmYD1/FB-IMG-1739284067428.jpg" alt="With Media Friends">
-              <div class="item-overlay"><h3>With Media Friends</h3></div>
-            </div>
-            <div class="gallery-item">
-              <img src="https://i.ibb.co/YB8w2cb3/2024-10-18.jpg" alt="With Media Friends">
-              <div class="item-overlay"><h3>With Media Friends</h3></div>
-            </div>
-            <div class="gallery-item">
-              <img src="https://i.ibb.co/WvCgdn6Q/IMG-6455.jpg" alt="With Media Friends">
-              <div class="item-overlay"><h3>With Media Friends</h3></div>
-            </div>
-            <div class="gallery-item">
-              <img src="https://i.ibb.co/MxVnXhrL/IMG-6430.jpg" alt="With Media Friends">
-              <div class="item-overlay"><h3>With Media Friends</h3></div>
-            </div>
-            <div class="gallery-item">
-              <img src="https://i.ibb.co/HDV1Q1dn/IMG-20221108-WA0011.jpg" alt="With Media Friends">
-              <div class="item-overlay"><h3>With Media Friends</h3></div>
-            </div>
-            <div class="gallery-item">
-              <img src="https://i.ibb.co/DHC8SVwD/FB-IMG-1664911051838.jpg" alt="With Media Friends">
-              <div class="item-overlay"><h3>With Media Friends</h3></div>
-            </div>
-            <div class="gallery-item">
-              <img src="https://i.ibb.co/ZRV6bQ5f/IMG-20211120-WA0036.jpg" alt="With Media Friends">
-              <div class="item-overlay"><h3>With Media Friends</h3></div>
-            </div>
-            <div class="gallery-item">
-              <img src="https://i.ibb.co/pBRMJHqV/IMG-20211120-WA0034.jpg" alt="With Media Friends">
-              <div class="item-overlay"><h3>With Media Friends</h3></div>
-            </div>
-            <div class="gallery-item">
-              <img src="https://i.ibb.co/XZZtMvMB/IMG-20211120-WA0030.jpg" alt="With Media Friends">
-              <div class="item-overlay"><h3>With Media Friends</h3></div>
-            </div>
-            <div class="gallery-item">
-              <img src="https://i.ibb.co/Zz1df1sX/IMG-20211115-202830.jpg" alt="With Media Friends">
+              <img src="https://i.ibb.co/HpRbTq92/83095305-125164735665036-6344918726403424256极.jpg" alt="With Media Friends">
               <div class="item-overlay"><h3>With Media Friends</h3></div>
             </div>
           </div>
@@ -1132,26 +1072,32 @@
       </div>
     </section>
 
-    <section id="ai-tools">
+    <section id="fan-club">
       <div class="container">
         <div class="section-title">
-          <h2>AI-Powered Tools</h2>
+          <h2>Join The Fan Club</h2>
+          <p>Connect with other fans and get exclusive updates!</p>
         </div>
-        <div class="ai-features-container">
-          <div class="ai-feature-box">
-            <h2>AI Song Title Generator</h2>
-            <p>Generate creative song title ideas based on your mood or theme.</p>
-            <textarea class="ai-input" id="title-input" placeholder="e.g., a sad song about rain and lost love"></textarea>
-            <button class="btn" id="generateTitlesBtn">Generate Titles</button>
-            <div class="ai-output" id="titleOutput">Your generated titles will appear here...</div>
+        <div class="fan-club-container">
+          <h2>Mahdi Sultan Official Fan Club</h2>
+          <p>Join our growing community of over 50,000 fans! Get exclusive content, early access to new releases, and connect with other fans from around the world.</p>
+          
+          <div class="fan-club-stats">
+            <div class="fan-stat">
+              <span class="fan-stat-number">50K+</span>
+              <span class="fan-stat-label">Members</span>
+            </div>
+            <div class="fan-stat">
+              <span class="fan-stat-number">100+</span>
+              <span class="fan-stat-label">Exclusive Posts</span>
+            </div>
+            <div class="fan-stat">
+              <span class="fan-stat-number">24/7</span>
+              <span class="fan-stat-label">Active Community</span>
+            </div>
           </div>
-          <div class="ai-feature-box">
-            <h2>Fan Review Sentiment Analyzer</h2>
-            <p>Paste fan comments to analyze the overall sentiment.</p>
-            <textarea class="ai-input" id="sentiment-input" placeholder="e.g., I love this new song! The melody is so catchy."></textarea>
-            <button class="btn" id="analyzeSentimentBtn">Analyze Sentiment</button>
-            <div class="ai-output" id="sentimentOutput">Your sentiment analysis will appear here...</div>
-          </div>
+          
+          <a href="https://www.facebook.com/groups/1152766436631834/" target="_blank" class="btn">Join Facebook Group</a>
         </div>
       </div>
     </section>
@@ -1161,7 +1107,7 @@
     <div class="container">
       <div class="footer-content">
         <div class="footer-column">
-          <h3>Mahdi Sultan</h3>
+          <h3极>Mahdi Sultan</h3>
           <p>Record-breaking Bangladeshi singer-songwriter. Creating soulful music that blends traditional and contemporary sounds.</p>
           <div class="social-icons">
             <a href="https://open.spotify.com/artist/OILnprFiaSFlpYQMaiZe9?si=8gquMa6SQFW75rTrhayUAg" target="_blank"><i class="fab fa-spotify"></i></a>
@@ -1175,9 +1121,10 @@
           <h3>Quick Links</h3>
           <ul class="footer-links">
             <li><a href="#top-songs">Music</a></li>
+            <li><a href="#media">Media</a></li>
             <li><a href="#gallery">Gallery</a></li>
             <li><a href="#contributors">Fans</a></li>
-            <li><a href="#ai-tools">AI Tools</a></li>
+            <li><a href="#fan-club">Fan Club</a></li>
           </ul>
         </div>
         <div class="footer-column">
@@ -1225,49 +1172,6 @@
         tab.classList.add('active');
         document.getElementById(tabId).classList.add('active');
       });
-    });
-
-    // AI Features functionality
-    document.getElementById('generateTitlesBtn').addEventListener('click', function() {
-      const output = document.getElementById('titleOutput');
-      output.innerHTML = 'Generating creative titles...';
-      
-      setTimeout(() => {
-        const titles = [
-          "Eternal Monsoon Melody",
-          "Heartstrings of Dhaka",
-          "Silent Whispers in the Rain",
-          "Bengal Twilight Serenade",
-          "Soul of the Padma River"
-        ];
-        
-        let html = '<ul>';
-        titles.forEach(title => { 
-          html += `<li>${title}</li>`; 
-        });
-        html += '</ul>';
-        
-        output.innerHTML = html;
-        output.style.fontStyle = 'normal';
-      }, 1000);
-    });
-
-    document.getElementById('analyzeSentimentBtn').addEventListener('click', function() {
-      const input = document.getElementById('sentiment-input').value;
-      const output = document.getElementById('sentimentOutput');
-      output.innerHTML = 'Analyzing sentiment...';
-      
-      setTimeout(() => {
-        let sentiment = "Positive";
-        if (input.toLowerCase().includes('sad') || input.toLowerCase().includes('not good')) {
-          sentiment = "Negative";
-        } else if (input.length < 5) {
-          sentiment = "Neutral";
-        }
-        
-        output.innerHTML = `Detected Sentiment: <strong style='color:var(--primary);'>${sentiment}</strong>. Fans are loving the emotional depth!`;
-        output.style.fontStyle = 'normal';
-      }, 1000);
     });
   </script>
 </body>
